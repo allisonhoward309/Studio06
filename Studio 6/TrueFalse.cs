@@ -6,7 +6,7 @@ namespace Studio_6
 {
     class TrueFalse : Questions
     {
-        bool Answer { get; set; }
+        public bool Answer { get; set; }
         
 
         public TrueFalse(bool answer, string question) : base(question)

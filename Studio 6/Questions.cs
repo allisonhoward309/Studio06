@@ -8,7 +8,7 @@ namespace Studio_6
         {
              public string Question { get; set; }
              public int Points { get; set; }
-            public int AvailablePoints { get; set; }
+             public int AvailablePoints { get; set; }
 
         public Questions(string question)
             {

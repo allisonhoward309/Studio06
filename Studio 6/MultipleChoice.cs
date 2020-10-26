@@ -6,8 +6,8 @@ namespace Studio_6
 {
         public class MultipleChoice : Questions
         {
-            List<string> PossibleAnswers { get; set; }
-            string Answer { get; set; }
+            public List<string> PossibleAnswers { get; set; }
+            public string Answer { get; set; }
 
         public MultipleChoice(List<string> possibleAnswers, string answer, string question) : base(question)
             {

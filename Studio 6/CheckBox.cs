@@ -7,8 +7,8 @@ namespace Studio_6
 {
         public class CheckBox : Questions
         {
-            List<string> PossibleAnswers { get; set; }
-            List<int> Answer { get; set; }
+            public List<string> PossibleAnswers { get; set; }
+            public List<int> Answer { get; set; }
             private Dictionary<int, string> choices = new Dictionary<int, string> { };
 
         public CheckBox(List<string> possibleAnswers, List<int> answer, string question) : base(question)
