@@ -6,25 +6,26 @@ namespace Studio_6
 {
     class Quiz
     {
-        /**/
-       /* Hello*/
-            public List<Questions> Classes { get; set; }
-            public int Score { get; set; }
-            private int Total { get; set; }
+            List<Questions> Classes { get; set; }
+            int Score { get; set; }
+            public int Total { get; set; }
 
             public Quiz(List<Questions> classes)
             {
                 Classes = classes;
                 Score = 0;
+                Total = 0;
+                
                 for (int i=0; i<classes.Count; i++)
                 {
                     Total += classes[i].AvailablePoints;
-                    Console.WriteLine(Total);
             }
             }
             public List<Questions> AddQuestion(Questions input)
             {
                 Classes.Add(input);
+                Total += input.AvailablePoints;
+                
                 return Classes;
             }
 
@@ -43,10 +44,9 @@ namespace Studio_6
                 Score += pointsFromTest;
             }
         public void GradeQuiz()
-            {
-            int grade = Score / Total * 100;
-            Console.WriteLine("You scored " + grade + "%");
-                
-            }
+        {
+            Console.WriteLine("Your score is: " + Score + " / " + Total);
+
         }
     }
+}
